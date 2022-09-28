@@ -1,4 +1,6 @@
-string minWindow(string s, string t) {
+class Solution {
+public:
+    string minWindow(string s, string t) {
     unordered_map<char, int> need, window;
     for (char c : t) need[c]++;
     int left = 0, right = 0;
@@ -38,4 +40,5 @@ string minWindow(string s, string t) {
     // 返回最小覆盖子串
     return len == INT_MAX ?
         "" : s.substr(start, len);
-}
+    }
+};
