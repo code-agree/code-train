@@ -1,30 +1,37 @@
 class Solution {
 public:
-    string reverseWords(string s) {
-        reverse_string(s);
-        int left = 0, right = 0;
-        while (right < s.length()){
-            if (s[right] != ' '){
-                ++right;
-                continue;
-            }
-            else{
-                string s_substr = s.substr(left,right - 1);
-                reverse_string(s_substr);
-                left = right + 1;
-                ++right;
+    string minWindow(string s, string t) {
+    unordered_map<char, int> need, window;
+    for (char c : t){
+        need[c]++;
+    }
+    int left = 0, right = 0;
+    int valid = 0;
+    int start = 0, len = INT_MAX;
+    while (right < s.size()){
+        char c = s[right];
+        ++right;
+        if (need.count(c)){
+            window[c]++;
+            if (window[c] == need[c]){
+                valid++;
             }
         }
-        return s;
-    };
-    void reverse_string(string& s){
-        int i = 0, j = s.length() - 1;
-        while(j > i){
-            int temp = s[i];
-            s[i] = s[j];
-            s[j] = temp;
-            ++i;
-            --j; 
+        while (valid = need.size()){
+            if (right - left < len){
+                start = left;
+                len = right - left;
+            }
+            char d = s[left];
+            ++left;
+            if (need.count(d)){
+                if (window[d] == need[d]){
+                    --valid;
+                }
+                window[d]--;
+            }
         }
+    }
+    return len ==INT_MAX ? " " : s.substr(start, len);
     }
 };
