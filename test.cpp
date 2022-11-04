@@ -1,37 +1,60 @@
 class Solution {
+private:
+    vector<int> diff;
 public:
-    string minWindow(string s, string t) {
-    unordered_map<char, int> need, window;
-    for (char c : t){
-        need[c]++;
-    }
-    int left = 0, right = 0;
-    int valid = 0;
-    int start = 0, len = INT_MAX;
-    while (right < s.size()){
-        char c = s[right];
-        ++right;
-        if (need.count(c)){
-            window[c]++;
-            if (window[c] == need[c]){
-                valid++;
-            }
+    bool carPooling(vector<vector<int>>& trips, int capacity) {
+        vector<int>nums;
+        nums.resize(1001);
+        Difference df = new Difference(nums);
+        // 构造差分数组
+        for (int trip : trips){
+            int val = trip[0];
+            int j = trip[1];
+            int j = trip[2] - 1;
+            df.increment(i, j, val);
         }
-        while (valid = need.size()){
-            if (right - left < len){
-                start = left;
-                len = right - left;
-            }
-            char d = s[left];
-            ++left;
-            if (need.count(d)){
-                if (window[d] == need[d]){
-                    --valid;
-                }
-                window[d]--;
-            }
+    vector<int> res = df.result();
+    for (int i = 0; i < res.size(); ++i){
+        if (capacity < res[i]){
+            return false;
         }
     }
-    return len ==INT_MAX ? " " : s.substr(start, len);
+    return true;
+    }
+}
+// 差分数组工具类
+class Difference {
+    // 差分数组
+    private vector<int>diff;
+    
+    /* 输入一个初始数组，区间操作将在这个数组上进行 */
+    public Difference(vector<int> nums) {
+        assert nums.size() > 0;
+        diff.resize(nums.size());
+        // 根据初始数组构造差分数组
+        diff[0] = nums[0];
+        for (int i = 1; i < nums.size(); i++) {
+            diff[i] = nums[i] - nums[i - 1];
+        }
+    }
+
+    /* 给闭区间 [i, j] 增加 val（可以是负数）*/
+    public void increment(int i, int j, int val) {
+        diff[i] += val;
+        if (j + 1 < diff.size()) {
+            diff[j + 1] -= val;
+        }
+    }
+
+    /* 返回结果数组 */
+    public vector<int> result() {
+        vector<int>res;
+        res.resize(diff.size())
+        // 根据差分数组构造结果数组
+        res[0] = diff[0];
+        for (int i = 1; i < diff.size(); i++) {
+            res[i] = res[i - 1] + diff[i];
+        }
+        return res;
     }
 };
