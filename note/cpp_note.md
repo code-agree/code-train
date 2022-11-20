@@ -50,15 +50,15 @@ void traverse(TreeNode* root){
 ```
 ## 图的遍历框架
 基本的图遍历算法有两种
-> DFS[depth-first-search] / 深度优先搜索
-> BFS [breadth-first-search] / 广度优先搜索
+> DFS[depth-first-search] / 深度优先搜索 探查、回溯
+> BFS [breadth-first-search] / 广度优先搜索 逐层遍历
 ```cpp
 // 记录被遍历过的节点
 boolean[] visited;
 // 记录从起点到当前节点的路径
 boolean[] onPath;
 
-/* 图遍历框架 */
+/* 图遍历框架 */ DFS
 void traverse(Graph graph, int s) {
     if (visited[s]) return;
     // 经过节点 s，标记为已遍历
@@ -75,3 +75,46 @@ void traverse(Graph graph, int s) {
 ## 二分图
 lc 
 > https://leetcode.cn/problems/is-graph-bipartite/solution/er-fen-tu-de-bian-li-by-code-agree-zknp/
+
+## 回溯算法与DFS图的遍历算法
+- 两种算法的框架
+```cpp
+// DFS 算法，关注点在节点
+void traverse(TreeNode root) {
+    if (root == null) return;
+    printf("进入节点 %s", root);
+    for (TreeNode child : root.children) {
+        traverse(child);
+    }
+    printf("离开节点 %s", root);
+}
+
+// 回溯算法，关注点在树枝
+void backtrack(TreeNode root) {
+    if (root == null) return;
+    for (TreeNode child : root.children) {
+        // 做选择
+        printf("从 %s 到 %s", root, child);
+        backtrack(child);
+        // 撤销选择
+        printf("从 %s 到 %s", child, root);
+    }
+}
+
+```
+- 回溯算法核心框架
+```cpp
+for 选择 in 选择列表:
+    # 做选择
+    将该选择从选择列表移除
+    路径.add(选择)
+    backtrack(路径, 选择列表)
+    # 撤销选择
+    路径.remove(选择)
+    将该选择再加入选择列表
+
+```
+
+> 回溯算法关注树枝，DFS关注节点。  
+> 回溯算法，会漏掉根节点的遍历。
+*回溯算法为暴力穷举，复杂度一般不可能低于O(N!)*
