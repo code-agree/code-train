@@ -118,3 +118,12 @@ for 选择 in 选择列表:
 > 回溯算法关注树枝，DFS关注节点。  
 > 回溯算法，会漏掉根节点的遍历。
 *回溯算法为暴力穷举，复杂度一般不可能低于O(N!)*
+- 回溯算法之全排列问题
+
+> https://labuladong.github.io/algo/4/31/104/   
+> https://leetcode.cn/problems/permutations/solution/hui-su-suan-fa-by-code-agree-7bkj/
+
+- 回溯算法之组合、全排列
+> https://labuladong.github.io/algo/4/31/106/
+> https://leetcode.cn/problems/subsets/solution/-by-code-agree-oglv/
+> https://leetcode.cn/problems/combinations/solution/-by-code-agree-327d/
