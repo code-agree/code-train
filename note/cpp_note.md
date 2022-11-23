@@ -1,7 +1,5 @@
 # 1. 二叉树
 ## 1.1. 二叉树的遍历
-
-
 前中后序是对于root节点而言.
 
 - 中序遍历：[左子树，root，右子树]
@@ -27,11 +25,9 @@ void traverse(TreeNode root) {
 > - 若任意节点的左子树不空，则左子树上所有节点的值均小于它的根节点的值
 > - 若任意节点的右子树不空，则右子树上所有节点的值均大于它的根节点的值
 > - 任意节点的左、右子树也分别为二元搜索树。 
-
-
 # 2022/11/15
 ## 图论基础及遍历算法
-> https://labuladong.github.io/algo/2/22/50/      
+> https://labuladong.github.io/algo/2/22/50/
 
 图由**节点**和**边**构成，图的逻辑结构：
 ![](./tulun.jpeg)
@@ -50,8 +46,9 @@ void traverse(TreeNode* root){
 ```
 ## 图的遍历框架
 基本的图遍历算法有两种
-> DFS[depth-first-search] / 深度优先搜索 探查、回溯
+> DFS[depth-first-search] / 深度优先搜索 探查、回溯   
 > BFS [breadth-first-search] / 广度优先搜索 逐层遍历
+
 ```cpp
 // 记录被遍历过的节点
 boolean[] visited;
@@ -75,7 +72,6 @@ void traverse(Graph graph, int s) {
 ## 二分图
 lc 
 > https://leetcode.cn/problems/is-graph-bipartite/solution/er-fen-tu-de-bian-li-by-code-agree-zknp/
-
 ## 回溯算法与DFS图的遍历算法
 - 两种算法的框架
 ```cpp
@@ -100,7 +96,6 @@ void backtrack(TreeNode root) {
         printf("从 %s 到 %s", child, root);
     }
 }
-
 ```
 - 回溯算法核心框架
 ```cpp
@@ -112,18 +107,34 @@ for 选择 in 选择列表:
     # 撤销选择
     路径.remove(选择)
     将该选择再加入选择列表
-
 ```
-
 > 回溯算法关注树枝，DFS关注节点。  
 > 回溯算法，会漏掉根节点的遍历。
 *回溯算法为暴力穷举，复杂度一般不可能低于O(N!)*
 - 回溯算法之全排列问题
-
 > https://labuladong.github.io/algo/4/31/104/   
 > https://leetcode.cn/problems/permutations/solution/hui-su-suan-fa-by-code-agree-7bkj/
-
 - 回溯算法之组合、全排列
 > https://labuladong.github.io/algo/4/31/106/
 > https://leetcode.cn/problems/subsets/solution/-by-code-agree-oglv/
 > https://leetcode.cn/problems/combinations/solution/-by-code-agree-327d/
+## 数组的遍历框架
+迭代遍历数组
+```cpp
+void traverse(vector<int> nums){
+    for (int i = 0; i < nums.size(); ++i){
+
+    }
+}
+```
+递归遍历数组
+```cpp
+void traverse(vector<int> nums, int i){
+    if (i == nums.size()){
+        return;
+    }
+    // 前序位置
+    traverse(nums, i + 1);
+    // 后序位置
+}
+```
