@@ -40,3 +40,8 @@
 > - 指针无需在定义时赋初始值[没有被初始化也将用拥有一个不确定的值];  
 > int *ip1, *ip2; 
 
+map 和 vector 初始化的区别
+- 定义vector
+> vector<int> spec;  // 空vector，不含任何元素;
+> vector<int> spec(10) // spec有10个元素，每个值都是0;
+
