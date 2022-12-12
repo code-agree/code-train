@@ -138,3 +138,8 @@ void traverse(vector<int> nums, int i){
     // 后序位置
 }
 ```
+## 12/11
+图的拓扑排序算法
+- 环检测 ➕ 后序遍历的反转顺序即为拓扑排序
+- 有向无环图必可拓扑排序   
+> https://labuladong.github.io/algo/2/22/51/
