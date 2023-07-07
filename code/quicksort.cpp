@@ -43,7 +43,7 @@ public:
 // 测试
 int main() {
     Solution quicksort;
-    vector<int> arr = {10, 7, 5, 41, 4, 1, 2, 9, 7, 10};
+    vector<int> arr = {10, 7, 5, 41, 4, 1, 2, 9, 7, 19};
     for (int n : arr) cout << n << " ";
     cout << endl;
 
