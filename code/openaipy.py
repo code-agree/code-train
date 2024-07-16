@@ -1,21 +1,27 @@
-import os
-import openai
-#填入你的OPENAI_API_KEY
-openai.api_key = "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"
+import requests
+from bs4 import BeautifulSoup
 
-#代理设置：如果你在墙内需要使用代理才能调用，支持http代理和socks代理
-#openai.proxy = "http://127.0.0.1:1080"
+def search_google_scholar(keyword):
+    url = f"https://scholar.google.com/scholar?hl=en&as_sdt=0%2C5&q={keyword}"
+    
+    # 发起GET请求并获取页面内容
+    response = requests.get(url)
+    html_content = response.text
+    
+    # 使用BeautifulSoup解析HTML内容
+    soup = BeautifulSoup(html_content, "html.parser")
+    
+    # 查找所有的搜索结果元素
+    results = soup.find_all("div", class_="gs_r gs_or gs_scl")
+    
+    # 提取搜索结果的标题和链接
+    for result in results:
+        title = result.find("h3", class_="gs_rt").text
+        link = result.find("a")["href"]
+        print(f"Title: {title}")
+        print(f"Link: {link}")
+        print("----------------------------------------------")
 
-conversation=[{"role": "system", "content": "You are a helpful assistant."}]
-
-while(True):
-    user_input = input()      
-    conversation.append({"role": "user", "content": user_input})
-
-    response = openai.ChatCompletion.create(
-        engine="gpt-3.5-turbo", # 模型.
-        messages = conversation
-    )
-
-    conversation.append({"role": "assistant", "content": response['choices'][0]['message']['content']})
-    print("\n" + response['choices'][0]['message']['content'] + "\n")
+# 指定关键词进行搜索
+keyword = "matesurface"
+search_google_scholar(keyword)

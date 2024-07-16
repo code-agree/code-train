@@ -1,0 +1,286 @@
+{
+    "basics": {
+      "name": "WENJUN YU",
+      "headline": "Senior C++ Developer | Backend Engineer Specialist",
+      "email": "lineyua66@gmail.com",
+      "phone": "18805195536",
+      "location": "",
+      "url": {
+        "label": "",
+        "href": ""
+      },
+      "customFields": [
+        {
+          "id": "v1ddvlwa9afmgpsgl7wj88ai",
+          "icon": "",
+          "name": "LinkedIn",
+          "value": "https://www.linkedin.com/in/wenjun-yu-3101a626a/"
+        }
+      ],
+      "picture": {
+        "url": "",
+        "size": 64,
+        "aspectRatio": 1,
+        "borderRadius": 0,
+        "effects": {
+          "hidden": false,
+          "border": false,
+          "grayscale": false
+        }
+      }
+    },
+    "sections": {
+      "summary": {
+        "name": "Summary",
+        "columns": 1,
+        "separateLinks": true,
+        "visible": true,
+        "id": "summary",
+        "content": "<p>Highly skilled backend engineer with extensive expertise in C++ development and a proven track record of building robust, scalable systems. Adept at optimizing performance, resolving complex technical challenges, and implementing cutting-edge solutions in high-stakes environments. Demonstrated ability to lead projects, conduct thorough code reviews, and drive continuous improvement in system reliability and efficiency.</p>"
+      },
+      "awards": {
+        "name": "Awards",
+        "columns": 1,
+        "separateLinks": true,
+        "visible": true,
+        "id": "awards",
+        "items": []
+      },
+      "certifications": {
+        "name": "Certifications",
+        "columns": 1,
+        "separateLinks": true,
+        "visible": true,
+        "id": "certifications",
+        "items": []
+      },
+      "education": {
+        "name": "Education",
+        "columns": 1,
+        "separateLinks": false,
+        "visible": true,
+        "id": "education",
+        "items": [
+          {
+            "id": "gpanuqf130mr3ri2lljsaee4",
+            "visible": true,
+            "institution": "Nanjing University",
+            "studyType": "Master of Science",
+            "area": "Optical Engineering",
+            "score": "GPA: 3.76/4.0",
+            "date": "September 2018 - June 2021",
+            "summary": "Specialized in advanced optics and engineering principles, developing a strong foundation in complex problem-solving and analytical thinking.",
+            "url": {
+              "label": "",
+              "href": ""
+            }
+          },
+          {
+            "id": "l0h9cvt6n8znirbm39j47sp0",
+            "visible": true,
+            "institution": "Anhui University of Technology",
+            "studyType": "Bachelor of Engineering",
+            "area": "Materials Engineering",
+            "score": "GPA: 3.52/4.0",
+            "date": "August 2013 - June 2017",
+            "summary": "Gained comprehensive knowledge in materials science and engineering, fostering a strong technical background applicable to software development.",
+            "url": {
+              "label": "",
+              "href": ""
+            }
+          }
+        ]
+      },
+      "experience": {
+        "name": "Professional Experience",
+        "columns": 1,
+        "separateLinks": false,
+        "visible": true,
+        "id": "experience",
+        "items": [
+          {
+            "id": "uzugvz4cmo351bowa7scz1j0",
+            "visible": true,
+            "company": "ZTE Corporation",
+            "position": "Senior Software Development Engineer",
+            "location": "Nanjing, China",
+            "date": "June 2021 - February 2024",
+            "summary": "<ul><li><p>Spearheaded the development and maintenance of critical modules for the 5G Core Network Public Service System - OAM Project, with a focus on advanced data synchronization and configuration management techniques.</p></li><li><p>Led comprehensive code reviews, identifying and resolving high-priority issues to enhance code quality and system reliability, resulting in a 30% reduction in post-deployment faults.</p></li><li><p>Played a pivotal role in the OAM High-Reliability Architecture Improvement project, implementing offline data consistency comparison functionality that significantly boosted system reliability and data integrity.</p></li><li><p>Demonstrated expertise in memory leak detection and resolution using Valgrind, and efficiently diagnosed core dump issues utilizing Crash, improving system stability by 25%.</p></li><li><p>Innovated the deployment process by developing automated tools for the BM CAAS environment, reducing deployment time by 40% and enhancing overall maintenance efficiency.</p></li><li><p>Architected and implemented the Fault Tolerance (FT) design for the data sync module, successfully creating a robust FT module from the ground up that increased system uptime by 15%.</p></li><li><p>Designed and implemented a CI/CD pipeline, streamlining the development process and reducing time-to-market for new features by 20%.</p></li></ul>",
+            "url": {
+              "label": "",
+              "href": ""
+            }
+          }
+        ]
+      },
+      "volunteer": {
+        "name": "Volunteering",
+        "columns": 1,
+        "separateLinks": true,
+        "visible": true,
+        "id": "volunteer",
+        "items": []
+      },
+      "interests": {
+        "name": "Interests",
+        "columns": 1,
+        "separateLinks": true,
+        "visible": true,
+        "id": "interests",
+        "items": []
+      },
+      "languages": {
+        "name": "Languages",
+        "columns": 1,
+        "separateLinks": true,
+        "visible": false,
+        "id": "languages",
+        "items": []
+      },
+      "profiles": {
+        "name": "Profiles",
+        "columns": 1,
+        "separateLinks": true,
+        "visible": true,
+        "id": "profiles",
+        "items": []
+      },
+      "projects": {
+        "name": "Key Projects",
+        "columns": 1,
+        "separateLinks": true,
+        "visible": true,
+        "id": "projects",
+        "items": [
+          {
+            "id": "ola27rz6k0nxjndscpq3oj4y",
+            "visible": true,
+            "name": "XTP Quantitative Trading Interface Subscription Application",
+            "description": "Lead Developer",
+            "date": "May 2023 - March 2024",
+            "summary": "<ul><li><p>Conceptualized and single-handedly developed a high-performance C++ application for XTP quantitative trading interface subscription, demonstrating strong initiative and technical proficiency.</p></li><li><p>Engineered an efficient system to subscribe to the XTP API, leveraging low-latency and high-concurrency techniques to retrieve real-time stock market information from securities exchanges.</p></li><li><p>Implemented robust architecture ensuring scalability and reliability, capable of handling large volumes of market data with minimal latency.</p></li><li><p>Designed and integrated advanced features to support sophisticated trading strategies, empowering traders with real-time market insights and automated decision-making capabilities.</p></li><li><p>Utilized best practices in software engineering throughout the development lifecycle, including thorough requirements analysis, modular design, rigorous testing, and seamless deployment.</p></li><li><p>Achieved exceptional performance metrics, with the application demonstrating a 50% reduction in data processing time compared to industry standards.</p></li></ul>",
+            "keywords": [],
+            "url": {
+              "label": "",
+              "href": "https://github.com/code-agree/trade_xtp/tree/main"
+            }
+          }
+        ]
+      },
+      "publications": {
+        "name": "Publications",
+        "columns": 1,
+        "separateLinks": true,
+        "visible": true,
+        "id": "publications",
+        "items": []
+      },
+      "references": {
+        "name": "References",
+        "columns": 1,
+        "separateLinks": true,
+        "visible": true,
+        "id": "references",
+        "items": []
+      },
+      "skills": {
+        "name": "Technical Proficiencies",
+        "columns": 1,
+        "separateLinks": false,
+        "visible": true,
+        "id": "skills",
+        "items": [
+          {
+            "id": "nr2wcfm5i8fgqq940vm0dhwk",
+            "visible": true,
+            "name": "Core Competencies",
+            "description": "Advanced algorithms & data structures, Design patterns, PostgreSQL, Linux systems, RESTful API development, CI/CD implementation, DevOps practices, Docker containerization, Git version control, Kubernetes orchestration, Requirements analysis & system design, STL optimization, Memory leak detection & resolution, Advanced debugging techniques, Performance profiling & optimization, Core dump analysis, Multithreading synchronization, Static & dynamic code analysis",
+            "level": 0,
+            "keywords": []
+          },
+          {
+            "id": "h9oe1wh44ntljv94nalf7sfz",
+            "visible": true,
+            "name": "Programming Languages",
+            "description": "C++ (Expert), Python (Proficient), Shell scripting (Competent)",
+            "level": 0,
+            "keywords": []
+          },
+          {
+            "id": "y1c8auecvv9gvqm9l2qr0zti",
+            "visible": true,
+            "name": "Languages",
+            "description": "English (Professional working proficiency), Chinese (Native proficiency)",
+            "level": 0,
+            "keywords": []
+          }
+        ]
+      },
+      "custom": {
+        "xcl8u54yq4rk3c2tckpxrfw1": {
+          "name": "Custom Section",
+          "columns": 1,
+          "separateLinks": true,
+          "visible": true,
+          "id": "xcl8u54yq4rk3c2tckpxrfw1",
+          "items": []
+        }
+      }
+    },
+    "metadata": {
+      "template": "rhyhorn",
+      "layout": [
+        [
+          [
+            "summary",
+            "skills",
+            "education",
+            "experience",
+            "languages",
+            "projects",
+            "interests",
+            "custom.xcl8u54yq4rk3c2tckpxrfw1"
+          ],
+          [
+            "certifications",
+            "awards",
+            "volunteer",
+            "references",
+            "profiles",
+            "publications"
+          ]
+        ]
+      ],
+      "css": {
+        "value": ".section {\n\toutline: 1px solid #000;\n\toutline-offset: 4px;\n}",
+        "visible": false
+      },
+      "page": {
+        "margin": 48,
+        "format": "a4",
+        "options": {
+          "breakLine": false,
+          "pageNumbers": false
+        }
+      },
+      "theme": {
+        "background": "#ffffff",
+        "text": "#000000",
+        "primary": "#dc2626"
+      },
+      "typography": {
+        "font": {
+          "family": "IBM Plex Serif",
+          "subset": "latin",
+          "variants": [
+            "regular"
+          ],
+          "size": 13.1
+        },
+        "lineHeight": 1.05,
+        "hideIcons": true,
+        "underlineLinks": false
+      },
+      "notes": ""
+    }
+  }
