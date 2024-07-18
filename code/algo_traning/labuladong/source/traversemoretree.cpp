@@ -10,25 +10,30 @@ public:
     Node(int value) : val(value) {}
 };
 
+int depth = 0;
 void traverse(Node* root) {
     if (root == nullptr) return;
     for (Node* child : root->children) {
-        printf("从节点 %d 进入节点 %d\n", root->val, child->val);
+        depth++;
+        printf("从节点 %d 进入节点 %d, depth=%d\n", root->val, child->val,depth);
         traverse(child);
-        printf("从节点 %d 回到节点 %d\n", child->val, root->val);
+        depth--;
+        printf("从节点 %d 回到节点 %d, depth=%d\n", child->val, root->val, depth);
     }
 }
-
+int depth2 = 0;
 // DFS 算法把「做选择」「撤销选择」的逻辑放在 for 循环外面
 void dfs(Node* root) {
     if (root == NULL) return;
     // 做选择
-    printf("我已经进入节点 %d 啦\n", root->val);
+    depth2++;
+    printf("我已经进入节点 %d 啦 depth2=%d\n", root->val, depth2);
     for (Node* child : root->children) {
         dfs(child);
     }
     // 撤销选择
-    printf("我将要离开节点 %d 啦\n", root->val);
+    depth2--;
+    printf("我将要离开节点 %d 啦, depth2=%d\n", root->val, depth2);
 }
 
 int main() {
@@ -45,7 +50,7 @@ int main() {
 
     // 调用traverse函数
     std::cout << "开始遍历多叉树：" << std::endl;
-    // traverse(root);
+    traverse(root);
     dfs(root);
 
     // 释放内存

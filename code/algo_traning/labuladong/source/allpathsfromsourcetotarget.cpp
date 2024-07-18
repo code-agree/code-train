@@ -18,7 +18,7 @@ public:
     void traverse(vector<vector<int>>& graph, int s){
         if (graph.size() == 0){
             return
-        };
+        }
         onpath.push_back(s);
         if (s == graph.size() - 1){
             res.push_back(onpath);
