@@ -1,0 +1,48 @@
+Start testing: Jul 19 10:57 EDT
+----------------------------------------------------------
+1/1 Testing: postfix_calculator_test
+1/1 Test: postfix_calculator_test
+Command: "/home/code-train/code/calculation/build/test/postfix_calculator_test"
+Directory: /home/code-train/code/calculation/build/test
+"postfix_calculator_test" start time: Jul 19 10:57 EDT
+Output:
+----------------------------------------------------------
+[==========] Running 8 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 8 tests from PostfixCalculatorTest
+[ RUN      ] PostfixCalculatorTest.BasicOperations
+[       OK ] PostfixCalculatorTest.BasicOperations (0 ms)
+[ RUN      ] PostfixCalculatorTest.ComplexExpressions
+[       OK ] PostfixCalculatorTest.ComplexExpressions (0 ms)
+[ RUN      ] PostfixCalculatorTest.PowerAndSquareRoot
+unknown file: Failure
+C++ exception with description "Not enough operands" thrown in the test body.
+[  FAILED  ] PostfixCalculatorTest.PowerAndSquareRoot (0 ms)
+[ RUN      ] PostfixCalculatorTest.DecimalsAndNegatives
+[       OK ] PostfixCalculatorTest.DecimalsAndNegatives (0 ms)
+[ RUN      ] PostfixCalculatorTest.BoundaryValues
+[       OK ] PostfixCalculatorTest.BoundaryValues (0 ms)
+[ RUN      ] PostfixCalculatorTest.ExceptionHandling
+[       OK ] PostfixCalculatorTest.ExceptionHandling (0 ms)
+[ RUN      ] PostfixCalculatorTest.EmptyExpression
+[       OK ] PostfixCalculatorTest.EmptyExpression (0 ms)
+[ RUN      ] PostfixCalculatorTest.InvalidToken
+[       OK ] PostfixCalculatorTest.InvalidToken (0 ms)
+[----------] 8 tests from PostfixCalculatorTest (1 ms total)
+
+[----------] Global test environment tear-down
+[==========] 8 tests from 1 test suite ran. (1 ms total)
+[  PASSED  ] 7 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] PostfixCalculatorTest.PowerAndSquareRoot
+
+ 1 FAILED TEST
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Failed.
+"postfix_calculator_test" end time: Jul 19 10:57 EDT
+"postfix_calculator_test" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Jul 19 10:57 EDT

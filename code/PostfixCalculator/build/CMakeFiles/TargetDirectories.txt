@@ -1,0 +1,9 @@
+/home/code-train/code/calculation/build/CMakeFiles/postfix_calculator_lib.dir
+/home/code-train/code/calculation/build/CMakeFiles/postfix_calculator.dir
+/home/code-train/code/calculation/build/CMakeFiles/test.dir
+/home/code-train/code/calculation/build/CMakeFiles/edit_cache.dir
+/home/code-train/code/calculation/build/CMakeFiles/rebuild_cache.dir
+/home/code-train/code/calculation/build/test/CMakeFiles/postfix_calculator_test.dir
+/home/code-train/code/calculation/build/test/CMakeFiles/test.dir
+/home/code-train/code/calculation/build/test/CMakeFiles/edit_cache.dir
+/home/code-train/code/calculation/build/test/CMakeFiles/rebuild_cache.dir

@@ -1,0 +1,2 @@
+/usr/bin/ar qc libpostfix_calculator_lib.a CMakeFiles/postfix_calculator_lib.dir/src/PostfixCalculator.cpp.o
+/usr/bin/ranlib libpostfix_calculator_lib.a

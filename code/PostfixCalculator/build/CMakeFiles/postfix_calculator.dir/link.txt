@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/postfix_calculator.dir/main/main.cpp.o -o postfix_calculator  libpostfix_calculator_lib.a 

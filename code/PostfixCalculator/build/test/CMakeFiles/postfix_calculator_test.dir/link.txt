@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/postfix_calculator_test.dir/PostfixCalculatorTest.cpp.o -o postfix_calculator_test  ../libpostfix_calculator_lib.a /usr/lib/x86_64-linux-gnu/libgtest.a -lpthread 

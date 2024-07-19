@@ -22,7 +22,7 @@ public:
         if (hasCycle){
             return {};
         }
-        reverse(postorder.begin(),postorder.end());
+        // reverse(postorder.begin(),postorder.end());
         return postorder;
     }
 
