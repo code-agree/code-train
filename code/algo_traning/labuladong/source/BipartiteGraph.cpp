@@ -12,6 +12,8 @@ private:
     bool isBip = true;
 
 public:
+    // 带参数的构造函数
+    Solution(string s, int i) : (name(s), age(i)){};
     bool isBipartite(vector<vector<int>>& graph) {
         visited.resize(graph.size());
         colour.resize(graph.size());

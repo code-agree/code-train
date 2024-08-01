@@ -1,6 +1,7 @@
 #include<string>
 #include<iostream>
 #include<vector>
+#include <algorithm>
 
 using namespace std;
 
@@ -44,7 +45,7 @@ public:
     int minCostConnectPoints(vector<vector<int>>& points) {
         int mst = 0;
         int sz = points.size();
-        vector<vector<int>> edges(sz);
+        vector<vector<int>> edges;
         UnionFind UF(sz);
         for (int i = 0; i < sz; ++i){
             for (int j = i + 1; j < sz; ++j){
@@ -53,15 +54,15 @@ public:
                 int weight = abs(xi - ji) + abs(yi - jy);
                 edges.push_back({i, j, weight});
             }
-
-            for (auto vec : edges){
-                int u = vec[0], v = vec[1], wei = vec[2];
-                if (UF.isConnect(u, v)){
-                    continue;
-                }
-                UF._union(u, v);
-                mst += wei;
+        }
+        sort(edges.begin(), edges.end(), [](vector<int>& a, vector<int>& b){return a[2] < b[2];});
+        for (auto vec : edges){
+            int u = vec[0], v = vec[1], wei = vec[2];
+            if (UF.isConnect(u, v)){
+                continue;
             }
+            UF._union(u, v);
+            mst += wei;
         }
         return UF.getCount() == 1 ? mst : -1;
     }

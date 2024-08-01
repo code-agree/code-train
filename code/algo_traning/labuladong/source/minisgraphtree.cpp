@@ -2,6 +2,7 @@
 #include <iostream>
 #include <vector>
 #include <string>
+#include <algorithm>
 
 using namespace std;
 
@@ -39,7 +40,6 @@ public:
     int getCount(){
         return count;
     }
-
 };
 
 class Solution{
@@ -47,9 +47,13 @@ public:
     int minimumCost(int n, vector<vector<int>>& connections){
         UnionFind UF(n);
         int mst = 0;
+        sort(connections.begin(), connections.end(), 
+            [](const vector<int>& a, const vector<int>& b) {
+                return a[2] < b[2];
+            });
         for (auto vec : connections){
-            int u = vec[0];
-            int v = vec[1];
+            int u = vec[0] - 1;
+            int v = vec[1] - 1;
             int weight = vec[2];
             if (UF.isConnect(u, v)){
                 continue;
